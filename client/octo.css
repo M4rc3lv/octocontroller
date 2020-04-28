@@ -1,0 +1,126 @@
+:root {
+ --zwart: #2F2F2F;
+ --darkbg: #151724;
+ --wit: #FFFFFD;
+ --disabled: #999998;
+ --wit2: #FFFFAA;
+}
+
+html,body {
+ font-family:"DejaVu Sans";
+ font-size:18px; 
+ background:var(--darkbg); 
+ color:var(--wit);
+}
+h1 {
+ color:#FFA61F;
+ font-family:Georgia,Serif;
+  --interval: 10s;
+  display: block;
+  font-weight:normal;
+  text-shadow: 
+    0 0 10px var(--color1),
+    0 0 20px var(--color2),
+    0 0 40px var(--color3),
+    0 0 80px var(--color4);
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: flicker steps(100) var(--interval) 1s infinite;
+    
+  --color1: goldenrod;
+  --color2: orangered;
+  --color3: mediumblue;
+  --color4: purple;
+}    
+
+@keyframes flicker {
+  50% {
+    color: white;
+    filter: saturate(200%) hue-rotate(20deg);
+  }
+}   
+
+.m {
+ width:1000px;
+ margin: 0 auto;
+}
+
+h2 {
+ font-weight:bold;
+ margin-top:8px;
+ font-size:1.2em; 
+ margin-left:16px;
+ margin-bottom:0;
+ display:inline-block;
+ text-shadow: 1px 1px 2px black;
+ color:#FFA61F;
+}
+h3 {
+ font-weight:normal;
+ margin-top:0px;
+ margin-left:16px;
+ display:block;
+ font-size:1.2em;text-shadow: 1px 1px 2px black;
+}
+
+.btn {
+  display:block;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--wit);  
+  display:inline-block;
+  margin-right:8px;
+  text-align:center;  
+  cursor:pointer;  
+  background: linear-gradient(135deg, #C43168 0%, #E69616 100%);
+}
+.btn:hover {  
+  background: linear-gradient(165deg, #C43168 0%, #AB6F11 199%);
+}
+.btn:active {  
+  background: linear-gradient(165deg, #C43168 0%, #AB6F11 199%);
+  border: 2px solid #999;
+}
+.btn i { 
+ font-size:30px;
+ padding-top:8px; 
+}
+.disabled,.disabled:hover  {
+ border: 2px solid var(--disabled)!important; 
+ background:none;
+ cursor:not-allowed;
+}
+.disabled i {
+ color:var(--disabled);
+}
+.buttons { 
+ text-align:center;
+}
+.status {
+ font-size:0.9em;
+ color:var(--wit2);
+ text-align:center;
+ margin-top:8px;
+}
+code {display:block;margin-left:16px;text-shadow: 1px 1px 2px black;
+ height:1.2em; overflow:hidden;
+}
+.printer1 {
+ background-image:url('/pix/printer1.jpg');
+ width:50%;
+ height:240px;
+ background-size: 100%;
+ border-radius:4px;
+ display:inline-block;
+}
+
+.printer2 {
+ background-image:url('/pix/printer2.jpg');
+ width:490px;
+ height:240px;
+ background-size: 100%;
+ border-radius:4px;
+ display:inline-block;
+}
+
